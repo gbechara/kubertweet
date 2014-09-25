@@ -74,20 +74,20 @@ Start openshift
 
 Start the kunernates service
 ----
-# _output/go/bin/openshift kube create services -c /home/gabriel/kubertweet/kubernetes/kuber-tweet-mysql-service.json
+# _output/go/bin/openshift kube create services -c /home/gabriel/kubertweet/ose3/kuber-tweet-mysql-service.json
 ----
 
 Start the kubernates pod that contains the DB
 ----
-# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/kubernetes/kuber-tweet-mysql.json
+# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/ose3/kuber-tweet-mysql.json
 ----
 
 WAIT for DB, check that it is listening on port 3309 and 10000 (proxied by the kubernates services) 
 
 Start the kubernates pods that contains rtGov and FSW
 ----
-# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/kubernetes/kuber-tweet-rtgov.json
-# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/kubernetes/kuber-tweet-fsw.json
+# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/ose3/kuber-tweet-rtgov.json
+# _output/go/bin/openshift kube create pods -c /home/gabriel/kubertweet/ose3/kuber-tweet-fsw.json
 ----
 
 ==== Checking the status of the pods
